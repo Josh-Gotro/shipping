@@ -1,6 +1,11 @@
 const express = require('express');
 const bodyParser = require('body-parser');
-const API_KEY = require('dotenv');
+//body-parser extracts the entire body portion 
+//of an incoming request stream and exposes it on req.body.
+
+const myEnv = require('dotenv');
+
+const API_KEY = myEnv.APIKey
 
 const app = express();
 app.use(bodyParser.urlencoded({ extended: false }));
