@@ -25,6 +25,9 @@ app.post('/track', (req, res) => {
 
     }
     res.sendStatus(200);
+
+    //do stuff with the info
+    console.log(req.body.data.tracking_number)
 });
 
 let server = app.listen(3000, () => {
